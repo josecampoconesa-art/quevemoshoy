@@ -10,25 +10,25 @@ export default async function handler(req, res) {
 
   const prompt = `Sos un experto en cine y series con conocimiento del mercado argentino y las plataformas disponibles en Argentina.
 
-El usuario respondió:
-- Estado de ánimo: ${a.mood || '-'}
+El usuario respondio:
+- Estado de animo: ${a.mood || '-'}
 - Quiere sentir: ${(a.feeling || []).join(', ') || '-'}
-- Lo último que vio: ${a.last_watched_text || '-'}
-- ¿Le gustó?: ${a.last_watched_sub || '-'}
-- Compañía: ${a.company || '-'}
-- Nuevo o clásico: ${a.new_or_classic || '-'}
+- Lo ultimo que vio: ${a.last_watched_text || '-'}
+- Le gusto?: ${a.last_watched_sub || '-'}
+- Compania: ${a.company || '-'}
+- Nuevo o clasico: ${a.new_or_classic || '-'}
 - Origen: ${a.origin || '-'}
 - Formato: ${(a.format || []).join(', ') || '-'}
 - Plataformas: ${(a.platforms || []).join(', ') || '-'}
 
-Recomendá exactamente 4 títulos disponibles en esas plataformas en Argentina. Para cada uno incluí:
+Recomienda exactamente 4 titulos disponibles en esas plataformas en Argentina. Para cada uno inclui:
 - title
 - year
-- type (Película / Serie / Miniserie / Documental)
+- type (Pelicula / Serie / Miniserie / Documental)
 - platform
-- why: 2 oraciones personales explicando por qué se lo recomendás en base a SUS respuestas
+- why: 2 oraciones personales explicando por que se lo recomendas en base a SUS respuestas
 
-Respondé SOLO en JSON válido sin markdown ni backticks:
+Responde SOLO en JSON valido sin markdown ni backticks:
 {"recommendations":[{"title":"","year":"","type":"","platform":"","why":""},{"title":"","year":"","type":"","platform":"","why":""},{"title":"","year":"","type":"","platform":"","why":""},{"title":"","year":"","type":"","platform":"","why":""}]}`;
 
   try {
